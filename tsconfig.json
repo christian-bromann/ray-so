@@ -32,5 +32,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.wasm", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "mcp-server/vitest.config.ts", "mcp-server/src/__tests__"]
 }
