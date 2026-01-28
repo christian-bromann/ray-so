@@ -12,10 +12,10 @@ import {
   VALID_EXPORT_SIZES,
   type ValidPadding,
   type ValidExportSize,
-} from "../shared/validators.js";
-import { generateCodeFrameHtml } from "../renderer/frame-renderer.js";
-import { captureScreenshotFullContent, ScreenshotError } from "../renderer/screenshot.js";
-import { detectLanguage } from "../renderer/language-detection.js";
+} from "../shared/validators";
+import { generateCodeFrameHtml } from "../renderer/frame-renderer";
+import { captureScreenshotFullContent, ScreenshotError } from "../renderer/screenshot";
+import { detectLanguage } from "../renderer/language-detection";
 
 /**
  * Input parameters for create_code_image tool

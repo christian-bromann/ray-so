@@ -1,8 +1,8 @@
 import { describe, it, expect, afterAll } from "vitest";
-import { closeBrowser } from "../renderer/browser-manager.js";
-import { closePagePool } from "../renderer/page-pool.js";
-import { disposeHighlighter } from "../renderer/highlighter.js";
-import { createCodeImage, createCodeImageToolSchema, handleCreateCodeImage } from "../tools/create-code-image.js";
+import { closeBrowser } from "../renderer/browser-manager";
+import { closePagePool } from "../renderer/page-pool";
+import { disposeHighlighter } from "../renderer/highlighter";
+import { createCodeImage, createCodeImageToolSchema, handleCreateCodeImage } from "../tools/create-code-image";
 
 describe("create_code_image Tool", () => {
   afterAll(async () => {

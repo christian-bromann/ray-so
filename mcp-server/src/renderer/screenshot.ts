@@ -5,8 +5,8 @@
  * Supports configurable pixel ratios and viewport dimensions.
  */
 
-import { getPage, releasePage } from "./page-pool.js";
-import { getBrowser } from "./browser-manager.js";
+import { getPage, releasePage } from "./page-pool";
+import { getBrowser } from "./browser-manager";
 
 /**
  * Options for screenshot capture

@@ -10,11 +10,11 @@
  */
 
 import { describe, it, expect, beforeAll } from "vitest";
-import { getHighlighter, highlightCode } from "../renderer/highlighter.js";
-import { generateCodeFrameHtml } from "../renderer/frame-renderer.js";
-import { renderHighlightedCode } from "../renderer/code-renderer.js";
-import { generateHtmlTemplate } from "../renderer/html-template.js";
-import { THEMES } from "../shared/themes.js";
+import { getHighlighter, highlightCode } from "../renderer/highlighter";
+import { generateCodeFrameHtml } from "../renderer/frame-renderer";
+import { renderHighlightedCode } from "../renderer/code-renderer";
+import { generateHtmlTemplate } from "../renderer/html-template";
+import { THEMES } from "../shared/themes";
 
 describe("HTML Generation", () => {
   describe("Theme CSS Variables", () => {

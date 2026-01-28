@@ -4,6 +4,6 @@
  * Exports all utility modules for the MCP server.
  */
 
-export * from "./logger.js";
-export * from "./warmup.js";
-export * from "./concurrency.js";
+export * from "./logger";
+export * from "./warmup";
+export * from "./concurrency";

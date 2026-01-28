@@ -5,8 +5,8 @@
  * Handles syntax highlighting, line numbers, and highlighted lines.
  */
 
-import { getHighlighter, highlightCode } from "./highlighter.js";
-import { LANGUAGES } from "../shared/languages.js";
+import { getHighlighter, highlightCode } from "./highlighter";
+import { LANGUAGES } from "../shared/languages";
 
 /**
  * Options for rendering highlighted code

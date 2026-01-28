@@ -6,8 +6,8 @@
  */
 
 import { createHighlighter, type Highlighter, type BundledLanguage } from "shiki";
-import { createRayShikiTheme } from "../shared/theme-css.js";
-import { LANGUAGES } from "../shared/languages.js";
+import { createRayShikiTheme } from "../shared/theme-css";
+import { LANGUAGES } from "../shared/languages";
 
 // Cached highlighter instance
 let highlighterInstance: Highlighter | null = null;

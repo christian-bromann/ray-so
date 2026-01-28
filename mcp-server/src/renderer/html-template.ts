@@ -5,8 +5,8 @@
  * Includes font loading, theme CSS variables, and frame styling.
  */
 
-import { Theme, ThemeCSSProperties, Font } from "../shared/themes.js";
-import { generateThemeCSSBlock } from "../shared/theme-css.js";
+import { Theme, ThemeCSSProperties, Font } from "../shared/themes";
+import { generateThemeCSSBlock } from "../shared/theme-css";
 
 /**
  * Options for generating HTML template

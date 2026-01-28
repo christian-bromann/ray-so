@@ -6,7 +6,7 @@
  */
 
 import hljs from "highlight.js";
-import { LANGUAGES, getAllLanguageIds } from "../shared/languages.js";
+import { LANGUAGES, getAllLanguageIds } from "../shared/languages";
 
 /**
  * Language detection result

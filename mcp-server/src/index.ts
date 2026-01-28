@@ -1,17 +1,17 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-import { listThemesToolSchema, listThemesZodSchema, handleListThemes } from "./tools/list-themes.js";
-import { listLanguagesToolSchema, listLanguagesZodSchema, handleListLanguages } from "./tools/list-languages.js";
+import { listThemesToolSchema, listThemesZodSchema, handleListThemes } from "./tools/list-themes";
+import { listLanguagesToolSchema, listLanguagesZodSchema, handleListLanguages } from "./tools/list-languages";
 import {
   createCodeImageToolSchema,
   createCodeImageZodSchema,
   handleCreateCodeImage,
   type CreateCodeImageInput,
-} from "./tools/create-code-image.js";
-import { closeBrowser } from "./renderer/browser-manager.js";
-import { closePagePool } from "./renderer/page-pool.js";
-import { disposeHighlighter } from "./renderer/highlighter.js";
+} from "./tools/create-code-image";
+import { closeBrowser } from "./renderer/browser-manager";
+import { closePagePool } from "./renderer/page-pool";
+import { disposeHighlighter } from "./renderer/highlighter";
 
 /**
  * MCP Server for ray.so code image generation

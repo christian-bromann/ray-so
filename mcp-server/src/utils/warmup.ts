@@ -5,10 +5,10 @@
  * to ensure fast response times for the first request.
  */
 
-import { getBrowser } from "../renderer/browser-manager.js";
-import { getHighlighter } from "../renderer/highlighter.js";
-import { getPage, releasePage } from "../renderer/page-pool.js";
-import { logger } from "./logger.js";
+import { getBrowser } from "../renderer/browser-manager";
+import { getHighlighter } from "../renderer/highlighter";
+import { getPage, releasePage } from "../renderer/page-pool";
+import { logger } from "./logger";
 
 /**
  * Warmup status

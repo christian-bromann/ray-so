@@ -8,10 +8,10 @@
  */
 
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { createCodeImage } from "../tools/create-code-image.js";
-import { getBrowser, closeBrowser } from "../renderer/browser-manager.js";
-import { getHighlighter, disposeHighlighter } from "../renderer/highlighter.js";
-import { closePagePool } from "../renderer/page-pool.js";
+import { createCodeImage } from "../tools/create-code-image";
+import { getBrowser, closeBrowser } from "../renderer/browser-manager";
+import { getHighlighter, disposeHighlighter } from "../renderer/highlighter";
+import { closePagePool } from "../renderer/page-pool";
 
 describe("Performance Tests", () => {
   afterAll(async () => {

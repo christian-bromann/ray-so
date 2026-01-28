@@ -5,7 +5,7 @@
  * and provides semaphore-based access control.
  */
 
-import { logger } from "./logger.js";
+import { logger } from "./logger";
 
 /**
  * Configuration for concurrency limits

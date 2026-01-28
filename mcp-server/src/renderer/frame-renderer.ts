@@ -5,9 +5,9 @@
  * Ports Frame component logic to generate static HTML.
  */
 
-import { Theme, THEMES } from "../shared/themes.js";
-import { renderHighlightedCode } from "./code-renderer.js";
-import { generateHtmlTemplate, cssPropsToInlineStyle } from "./html-template.js";
+import { Theme, THEMES } from "../shared/themes";
+import { renderHighlightedCode } from "./code-renderer";
+import { generateHtmlTemplate, cssPropsToInlineStyle } from "./html-template";
 
 /**
  * Options for generating code frame HTML

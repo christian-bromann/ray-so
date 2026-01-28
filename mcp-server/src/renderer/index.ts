@@ -5,18 +5,13 @@
  */
 
 // Browser management
-export { getBrowser, closeBrowser, isBrowserRunning, restartBrowser } from "./browser-manager.js";
+export { getBrowser, closeBrowser, isBrowserRunning, restartBrowser } from "./browser-manager";
 
 // Page pool
-export { getPage, releasePage, closePagePool, getPoolStats, type PageConfig } from "./page-pool.js";
+export { getPage, releasePage, closePagePool, getPoolStats, type PageConfig } from "./page-pool";
 
 // Screenshot capture
-export {
-  captureScreenshot,
-  captureScreenshotFullContent,
-  ScreenshotError,
-  type ScreenshotOptions,
-} from "./screenshot.js";
+export { captureScreenshot, captureScreenshotFullContent, ScreenshotError, type ScreenshotOptions } from "./screenshot";
 
 // Syntax highlighting
 export {
@@ -26,10 +21,10 @@ export {
   disposeHighlighter,
   isHighlighterReady,
   type HighlightOptions,
-} from "./highlighter.js";
+} from "./highlighter";
 
 // HTML template generation
-export { generateHtmlTemplate, cssPropsToInlineStyle, type HtmlTemplateOptions } from "./html-template.js";
+export { generateHtmlTemplate, cssPropsToInlineStyle, type HtmlTemplateOptions } from "./html-template";
 
 // Code rendering
 export {
@@ -39,10 +34,10 @@ export {
   isValidLanguage,
   getLanguageDisplayName,
   type CodeRenderOptions,
-} from "./code-renderer.js";
+} from "./code-renderer";
 
 // Frame rendering
-export { generateCodeFrameHtml, type CodeFrameOptions } from "./frame-renderer.js";
+export { generateCodeFrameHtml, type CodeFrameOptions } from "./frame-renderer";
 
 // Language detection
 export {
@@ -51,4 +46,4 @@ export {
   resolveLanguage,
   getLanguageFromFilename,
   type DetectionResult,
-} from "./language-detection.js";
+} from "./language-detection";

@@ -6,7 +6,7 @@
  */
 
 import type { Page, BrowserContext } from "playwright-core";
-import { getBrowser } from "./browser-manager.js";
+import { getBrowser } from "./browser-manager";
 
 /**
  * Configuration for page creation

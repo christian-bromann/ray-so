@@ -6,7 +6,7 @@
  */
 
 import { z } from "zod";
-import { getLanguagesSortedByName } from "../shared/languages.js";
+import { getLanguagesSortedByName } from "../shared/languages";
 
 /**
  * Language information returned by the list_languages tool

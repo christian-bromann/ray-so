@@ -7,7 +7,7 @@
  */
 
 import { z } from "zod";
-import { THEMES, type Theme } from "../shared/themes.js";
+import { THEMES, type Theme } from "../shared/themes";
 
 /**
  * Theme information returned by the list_themes tool

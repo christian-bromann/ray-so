@@ -1,7 +1,7 @@
 import { describe, it, expect, afterAll, afterEach } from "vitest";
-import { getBrowser, closeBrowser, isBrowserRunning } from "../renderer/browser-manager.js";
-import { closePagePool } from "../renderer/page-pool.js";
-import { captureScreenshot, type ScreenshotOptions } from "../renderer/screenshot.js";
+import { getBrowser, closeBrowser, isBrowserRunning } from "../renderer/browser-manager";
+import { closePagePool } from "../renderer/page-pool";
+import { captureScreenshot, type ScreenshotOptions } from "../renderer/screenshot";
 
 describe("Playwright Renderer", () => {
   afterAll(async () => {
