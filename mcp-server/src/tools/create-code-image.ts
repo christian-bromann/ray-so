@@ -2,7 +2,7 @@
  * create_code_image MCP Tool
  *
  * Generates beautiful code images/screenshots from code snippets.
- * Uses Playwright for rendering and supports all ray.so themes.
+ * Uses Satori for rendering (no browser required) and supports all ray.so themes.
  */
 
 import { z } from "zod";
@@ -13,8 +13,7 @@ import {
   type ValidPadding,
   type ValidExportSize,
 } from "../shared/validators";
-import { generateCodeFrameHtml } from "../renderer/frame-renderer";
-import { captureScreenshotFullContent, ScreenshotError } from "../renderer/screenshot";
+import { renderCodeImageWithSatori, SatoriRenderError } from "../renderer/satori-renderer";
 import { detectLanguage } from "../renderer/language-detection";
 
 /**
@@ -211,32 +210,27 @@ export async function createCodeImage(input: CreateCodeImageInput): Promise<Crea
   }
 
   try {
-    // Generate HTML for the code frame
-    const html = await generateCodeFrameHtml({
-      code: input.code,
-      theme,
-      darkMode,
-      language,
-      padding,
-      background,
-      lineNumbers,
-      fileName,
-      highlightedLines,
-    });
-
-    // Capture screenshot with timeout
+    // Render the code image using Satori (no browser required)
     const timeoutPromise = new Promise<never>((_, reject) => {
       setTimeout(() => {
         reject(new Error(`Image generation timed out after ${GENERATION_TIMEOUT}ms`));
       }, GENERATION_TIMEOUT);
     });
 
-    const screenshotPromise = captureScreenshotFullContent(html, {
+    const renderPromise = renderCodeImageWithSatori({
+      code: input.code,
+      language,
+      theme,
+      darkMode,
+      padding,
+      background,
+      lineNumbers,
+      fileName,
+      highlightedLines,
       pixelRatio: exportSize,
-      timeout: GENERATION_TIMEOUT,
     });
 
-    const buffer = await Promise.race([screenshotPromise, timeoutPromise]);
+    const buffer = await Promise.race([renderPromise, timeoutPromise]);
 
     // Convert to base64
     const base64Image = buffer.toString("base64");
@@ -253,7 +247,7 @@ export async function createCodeImage(input: CreateCodeImageInput): Promise<Crea
     };
   } catch (error) {
     // Handle specific error types
-    if (error instanceof ScreenshotError) {
+    if (error instanceof SatoriRenderError) {
       return {
         success: false,
         error: error.message,

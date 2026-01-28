@@ -75,5 +75,6 @@ const handler = createMcpHandler(
 // Export handlers for all HTTP methods used by MCP
 export { handler as GET, handler as POST, handler as DELETE };
 
-// Route segment config for Vercel (browser automation needs more time)
-export const maxDuration = 60;
+// Route segment config for Vercel
+// Satori-based rendering is fast, but we allow some buffer for complex code
+export const maxDuration = 30;
