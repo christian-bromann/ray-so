@@ -44,7 +44,7 @@ const formatCode = async (code: string, language: Language | null) => {
   const formatted = await prettier.format(code, {
     parser: parser.name,
     plugins: [
-      parserModule,
+      parserModule.default,
       ...(["TypeScript", "JavaScript", "TSX"].includes(language.name)
         ? [(await import("prettier/plugins/estree")).default]
         : []),
