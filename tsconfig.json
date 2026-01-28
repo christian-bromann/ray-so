@@ -27,7 +27,8 @@
       "@prompts/*": ["./app/(navigation)/prompts/*"],
       "@snippets/*": ["./app/(navigation)/snippets/*"],
       "@themes/*": ["./app/(navigation)/themes/*"],
-      "@icon/*": ["./app/(navigation)/icon/*"]
+      "@icon/*": ["./app/(navigation)/icon/*"],
+      "@mcp-server/*": ["./mcp-server/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.wasm", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],

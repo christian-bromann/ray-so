@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "ray-so-code-image": {
+      "command": "npx",
+      "args": ["-y", "ray-so-mcp-server"],
+      "description": "MCP server for generating beautiful code images/screenshots using ray.so themes",
+      "tools": {
+        "list_themes": {
+          "description": "List all available themes for code image generation"
+        },
+        "list_languages": {
+          "description": "List all available programming languages for syntax highlighting"
+        },
+        "create_code_image": {
+          "description": "Generate a code image from a code snippet with syntax highlighting"
+        }
+      }
+    }
+  }
+}

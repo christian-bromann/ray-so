@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "eslint .",
     "prepare": "husky install",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "mcp:build": "npm run build --prefix mcp-server",
+    "mcp:start": "npm run start --prefix mcp-server",
+    "mcp:dev": "npm run dev --prefix mcp-server",
+    "mcp:test": "npm run test --prefix mcp-server"
   },
   "engines": {
     "node": "^22"
@@ -59,7 +63,12 @@
     "shiki": "^1.0.0",
     "sonner": "^2.0.1",
     "tailwind-merge": "^2.3.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "mcp-handler": "^1.0.7",
+    "playwright-core": "^1.58.0",
+    "@sparticuz/chromium": "^143.0.4",
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "zod": "^3.25.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.4.0",
