@@ -75,7 +75,5 @@ const handler = createMcpHandler(
 // Export handlers for all HTTP methods used by MCP
 export { handler as GET, handler as POST, handler as DELETE };
 
-// Vercel function configuration for browser automation
-export const config = {
-  maxDuration: 60, // 60 second timeout for image generation
-};
+// Route segment config for Vercel (browser automation needs more time)
+export const maxDuration = 60;
